@@ -16,7 +16,7 @@ export default function Weather() {
           <p className="author">
             Coded by{" "}
             <a
-                href="https://github.com/olhavasylievadev/weather-app"
+                href="https://github.com/olhavasylievadev/weather-react-app"
                 target="_blank"
                 rel="noreferrer noopenner"
             >
