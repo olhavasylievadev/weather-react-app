@@ -75,7 +75,7 @@ export default function Output(props) {
                 <div className="row mt-3">
                     <div className="col-sm-6">
                         <div className="d-flex weather-temperature">
-                            <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="light-rain" id="icon" width={100} height={100}/>
+                            <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png" alt="light-rain" id="icon" width={100} height={100}/>
                             <div className="text-weather">
                                 <strong id="temperature">20</strong>
                                 <span className="system">

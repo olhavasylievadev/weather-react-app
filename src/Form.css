@@ -15,14 +15,14 @@
     background-color: transparent;
     font-weight: lighter;
     color: black;
-    border: solid 2px #a68da4;
+    border: solid 2px #a68da4 !important;
     border-radius: 8px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-    transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out !important;
 }
 
 .searchbutton:hover {
-    background-color: #8885a7;
-    color: white;
-    border: none;
+    background-color: #8885a7 !important;
+    color: white !important;
+    border: none !important;
 }

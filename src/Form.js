@@ -47,7 +47,7 @@ export default function Form() {
                         </div>
                         <div className="col-sm-2">
                             <input
-                                className="btn btn-primary searchbutton"
+                                className="btn searchbutton"
                                 type="submit"
                                 id="search-city"
                                 value="Search"
@@ -55,7 +55,7 @@ export default function Form() {
                         </div>
                         <div className="col-sm-2">
                             <input
-                                className="btn btn-primary searchbutton"
+                                className="btn searchbutton"
                                 type="submit"
                                 id="my-location"
                                 value="Locate"
