@@ -65,6 +65,10 @@ li strong {
   color: #31486c;
 }
 
+.weather-forecast-temperature-min {
+  font-weight: 200;
+}
+
 a .author {
   color: #a68da4;
 }
@@ -94,6 +98,15 @@ a .author {
 .DailyForecast {
   font-size: 1em;
   font-weight: lighter;
+}
+
+.unit {
+  color: #8885a7;
+}
+
+.unit a {
+  text-decoration: none;
+  color: #31486c;
 }
 
 #date {
