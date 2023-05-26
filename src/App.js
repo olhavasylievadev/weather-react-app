@@ -8,7 +8,9 @@ export default function Weather() {
         <br />
         <div className="frame">
           <div className="d-flex flex-column gap-4">
-            <Form />
+            <Form
+                defaultCity="Berlin"
+            />
           </div>
           <br />
           <br />
