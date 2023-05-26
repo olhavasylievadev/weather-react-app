@@ -5,5 +5,9 @@ export default function FormatDay(props) {
     let day = date.getDay();
     let week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-    return week[day];
+    return(
+       <div>
+           {week[day]}
+       </div>
+    );
 }

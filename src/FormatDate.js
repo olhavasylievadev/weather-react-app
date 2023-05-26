@@ -16,5 +16,9 @@ export default function FormatDate(props) {
         let week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
         let today = week[currentDate.getDay()];
 
-        return `${today} ${hour}:${minute}`
+        return (
+            <div>
+                    {today} {hour}:{minute}
+            </div>
+        );
 }
