@@ -56,10 +56,6 @@ li strong {
   font-weight: 700;
 }
 
-.weather-temperature img {
-  margin-right: 0.3em;
-}
-
 .col {
   text-align: center;
   max-width: 20%;
@@ -95,7 +91,7 @@ a .author {
   color: #31486c;
 }
 
-.weather-forecast-date {
+.DailyForecast {
   font-size: 1em;
   font-weight: lighter;
 }
@@ -105,10 +101,6 @@ a .author {
   font-size: 1em;
   line-height: 1em;
   font-weight: lighter;
-}
-
-#forecast {
-  padding: 0 !important;
 }
 
 #weather-is {
