@@ -1,30 +1,12 @@
 import React from "react";
+import FormatDate from "./FormatDate";
 
 export default function Output(props) {
-    function formatTime(timestamp) {
-        let currentDate = new Date(timestamp);
-
-        let hour = currentDate.getHours();
-        if (hour < 10) {
-            hour = `0${hour}`;
-        }
-
-        let minute = currentDate.getMinutes();
-        if (minute < 10) {
-            minute = `0${minute}`;
-        }
-
-        let week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-        let today = week[currentDate.getDay()];
-
-        return `${today} ${hour}:${minute}`
-    }
-
         return (
             <div className="Output">
                 <div>
                     <h1>{props.weatherData.city}</h1>
-                    <div id="date">{formatTime(props.weatherData.time * 1000)}</div>
+                    <div id="date"><FormatDate time={props.weatherData.time * 1000}/></div>
                     <div id="weather-is">{props.weatherData.description}</div>
                 </div>
                 <div className="row mt-3">

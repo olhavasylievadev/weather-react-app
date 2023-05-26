@@ -1,17 +1,11 @@
 import React from "react";
+import FormatDay from "./FormatDay";
 
 export default function DailyForecast(props) {
-      function formatDay() {
-          let date = new Date(props.data.time * 1000);
-          let day = date.getDay();
-          let week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-          return week[day];
-      }
 
       return(
           <div>
-              <div className="DailyForecast">{formatDay()}</div>
+              <div className="DailyForecast"><FormatDay day={props.data.time * 1000} /></div>
               <img
                   src={`${props.data.condition.icon_url}`}
                   alt="weather-icon"
