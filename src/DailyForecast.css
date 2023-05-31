@@ -1,0 +1,13 @@
+.weather-forecast-temperature-max {
+    color: #31486c;
+}
+
+.weather-forecast-temperature-min {
+    font-weight: 300;
+    opacity: 50%;
+}
+
+.DailyForecast {
+    font-size: 1em;
+    font-weight: lighter;
+}

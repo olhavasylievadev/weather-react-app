@@ -50,23 +50,9 @@ li strong {
   border-radius: 16px;
 }
 
-.weather-temperature {
-  font-size: 2.5em;
-  color: #31486c;
-  font-weight: 700;
-}
-
 .col {
   text-align: center;
   max-width: 20%;
-}
-
-.weather-forecast-temperature-max {
-  color: #31486c;
-}
-
-.weather-forecast-temperature-min {
-  font-weight: 200;
 }
 
 a .author {
@@ -80,58 +66,11 @@ a .author {
   font-weight: lighter;
 }
 
-.text-weather {
-  margin-top: 0.62em;
-}
-
-.weather-forecast {
-  text-align: center;
-  font-size: 1em;
-  font-weight: lighter;
-}
-
-.weather-forecast strong {
-  font-weight: 700;
-  color: #31486c;
-}
-
-.DailyForecast {
-  font-size: 1em;
-  font-weight: lighter;
-}
-
-.unit {
-  color: #8885a7;
-}
-
-.unit a {
-  text-decoration: none;
-  color: #31486c;
-}
-
-#date {
-  text-align: left;
-  font-size: 1em;
-  line-height: 1em;
-  font-weight: lighter;
-}
-
-#weather-is {
-  font-size: 0.85em;
-  margin-top: 0.2em;
-  margin-bottom: 0;
-  font-weight: lighter;
-  text-align: left;
-}
-
-#weather-is:first-letter {
-  text-transform: capitalize;
-}
-
 @media (max-width: 576px) {
   ul {
     margin: 0 auto;
     font-size: 1em;
+    text-align: start;
   }
 
   .output img {
@@ -158,5 +97,10 @@ a .author {
 
   .searchbutton {
     justify-content: space-evenly;
+  }
+
+  .frame {
+    max-height: 1100px;
+    margin-bottom: 1em;
   }
 }

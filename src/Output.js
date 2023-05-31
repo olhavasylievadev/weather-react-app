@@ -1,6 +1,6 @@
 import React from "react";
 import FormatDate from "./FormatDate";
-import TemperatureUnits from "./TemperatureUnits";
+import "./Output.css";
 
 export default function Output(props) {
         return (
@@ -13,10 +13,11 @@ export default function Output(props) {
                 <div className="row mt-3">
                     <div className="col-sm-6">
                         <div className="d-flex weather-temperature">
-                            <img src={props.weatherData.imageUrl} alt="light-rain" id="icon" width={100} height={100}/>
+                            <img src={props.weatherData.imageUrl} alt="weather-icon" id="icon" width={100} height={100}/>
                             <div className="text-weather">
                                 <div>
-                                    <TemperatureUnits celsius={props.weatherData.temperature} />
+                                    <span className="temperature"><strong>{Math.round(props.weatherData.temperature)}</strong></span>
+                                    <span>°C</span>
                                 </div>
                             </div>
                         </div>

@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Form.css";
 import Output from "./Output";
+import Forecast from "./Forecast";
 
 export default function Form(props) {
     let [city, setCity] = useState(props.defaultCity);
     let [weather, setWeather] = useState({ready: false, city:props.defaultCity});
+    const apiKey = "06fa5f0c173ae8o9ctd4134fb2530e34";
+    const units = "metric";
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -13,9 +16,27 @@ export default function Form(props) {
         getWeather();
     }
 
+    function handleClick() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(getLocationWeather, error);
+        } else {
+            alert("Geolocation not supported");
+        }
+    }
+
+    function error() {
+        console.log("Unable to retrieve your location");
+    }
+
+    function getLocationWeather(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+
+        let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=${units}`
+        axios.get(apiUrl).then(updateInfo);
+    }
+
     function getWeather() {
-        let apiKey = "06fa5f0c173ae8o9ctd4134fb2530e34";
-        let units = "metric";
         let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
         axios.get(apiUrl).then(updateInfo);
     }
@@ -23,6 +44,7 @@ export default function Form(props) {
     function updateInfo(response) {
         setWeather({
             ready: true,
+            coordinates: response.data.coordinates,
             temperature: response.data.temperature.current,
             description: response.data.condition.description,
             wind: response.data.wind.speed,
@@ -63,6 +85,7 @@ export default function Form(props) {
                                     type="submit"
                                     id="my-location"
                                     value="Locate"
+                                    onClick={handleClick}
                                 />
                             </div>
                         </div>
@@ -70,6 +93,9 @@ export default function Form(props) {
                 </div>
                 <Output
                     weatherData={weather}
+                />
+                <Forecast
+                    city={weather.city}
                 />
             </div>
         );
