@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useRef, useState} from "react";
 import axios from "axios";
 import "./Form.css";
 import Output from "./Output";
@@ -10,10 +10,13 @@ export default function Form(props) {
     const apiKey = "06fa5f0c173ae8o9ctd4134fb2530e34";
     const units = "metric";
 
+    const searchRef = useRef();
+
     function handleSubmit(event) {
         event.preventDefault();
 
         getWeather();
+        searchRef.current.value = "";
     }
 
     function handleClick() {
@@ -66,6 +69,7 @@ export default function Form(props) {
                                     className="form-control me-1 searchbar"
                                     type="search"
                                     id="my-city"
+                                    ref={searchRef}
                                     placeholder="🔎Search for your city"
                                     aria-label="Search"
                                     onChange={(event) => setCity(event.target.value)}
